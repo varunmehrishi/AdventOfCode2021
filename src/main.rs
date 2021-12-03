@@ -1,6 +1,7 @@
 use std::env;
 use std::path::Path;
 
+mod binary_diagnostic;
 mod dive;
 mod sonar_sweep;
 mod utils;
@@ -16,4 +17,5 @@ fn main() {
 
     sonar_sweep::solve(&base.join("sonar_sweep_input.txt"));
     dive::solve(&base.join("dive_input.txt"));
+    binary_diagnostic::solve(&base.join("binary_diagnostic_input.txt"));
 }
