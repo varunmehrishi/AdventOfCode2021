@@ -1,7 +1,8 @@
 use super::get_count_at_index;
+use std::cmp::Ordering;
 
-pub fn get_oxygen_co2_rating<const T: usize>(values: &Vec<[u32; T]>) -> (u32, u32) {
-    let mut oxygen = values.clone();
+pub fn get_oxygen_co2_rating<const T: usize>(values: &[[u32; T]]) -> (u32, u32) {
+    let mut oxygen = values.to_vec();
     for i in 0..T {
         if oxygen.len() == 1 {
             break;
@@ -10,18 +11,17 @@ pub fn get_oxygen_co2_rating<const T: usize>(values: &Vec<[u32; T]>) -> (u32, u3
         let n = oxygen.len() as u32;
         let ones = get_count_at_index(&oxygen, i);
         let zeros = n - ones;
-        if ones > zeros {
-            oxygen = oxygen.into_iter().filter(|value| value[i] == 1).collect();
-        } else if ones == zeros {
-            oxygen = oxygen.into_iter().filter(|value| value[i] == 1).collect();
-        } else {
-            oxygen = oxygen.into_iter().filter(|value| value[i] == 0).collect();
+
+        oxygen = match ones.cmp(&zeros) {
+            Ordering::Greater => oxygen.into_iter().filter(|value| value[i] == 1).collect(),
+            Ordering::Equal => oxygen.into_iter().filter(|value| value[i] == 1).collect(),
+            Ordering::Less => oxygen.into_iter().filter(|value| value[i] == 0).collect(),
         }
     }
 
     // println!("Oxygen {:?}", oxygen);
 
-    let mut co2 = values.clone();
+    let mut co2 = values.to_vec();
     for i in 0..T {
         if co2.len() == 1 {
             break;
@@ -30,12 +30,11 @@ pub fn get_oxygen_co2_rating<const T: usize>(values: &Vec<[u32; T]>) -> (u32, u3
         let n = co2.len() as u32;
         let ones = get_count_at_index(&co2, i);
         let zeros = n - ones;
-        if ones > zeros {
-            co2 = co2.into_iter().filter(|value| value[i] == 0).collect();
-        } else if ones == zeros {
-            co2 = co2.into_iter().filter(|value| value[i] == 0).collect();
-        } else {
-            co2 = co2.into_iter().filter(|value| value[i] == 1).collect();
+
+        co2 = match ones.cmp(&zeros) {
+            Ordering::Greater => co2.into_iter().filter(|value| value[i] == 0).collect(),
+            Ordering::Equal => co2.into_iter().filter(|value| value[i] == 0).collect(),
+            Ordering::Less => co2.into_iter().filter(|value| value[i] == 1).collect(),
         }
     }
 

@@ -20,7 +20,7 @@ pub fn solve(file_path: &Path) {
     println!("Binary Diagnostic Part 2 Answer: {} ", life_support_rating);
 }
 
-fn get_counts<const T: usize>(values: &Vec<[u32; T]>) -> [u32; T] {
+fn get_counts<const T: usize>(values: &[[u32; T]]) -> [u32; T] {
     let mut counts = [0; T];
 
     for value in values {
@@ -32,7 +32,7 @@ fn get_counts<const T: usize>(values: &Vec<[u32; T]>) -> [u32; T] {
     counts
 }
 
-fn get_count_at_index<const T: usize>(values: &Vec<[u32; T]>, i: usize) -> u32 {
+fn get_count_at_index<const T: usize>(values: &[[u32; T]], i: usize) -> u32 {
     let mut count = 0;
     assert!(i < T);
 
