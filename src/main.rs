@@ -4,6 +4,7 @@ use std::path::Path;
 mod binary_diagnostic;
 mod dive;
 mod giant_squid;
+mod hydrothermal_venture;
 mod sonar_sweep;
 mod utils;
 
@@ -20,4 +21,5 @@ fn main() {
     dive::solve(&base.join("dive_input.txt"));
     binary_diagnostic::solve(&base.join("binary_diagnostic_input.txt"));
     giant_squid::solve(&base.join("giant_squid_input.txt"));
+    hydrothermal_venture::solve(&base.join("hydrothermal_venture_input.txt"));
 }
