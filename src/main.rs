@@ -5,6 +5,7 @@ mod binary_diagnostic;
 mod dive;
 mod giant_squid;
 mod hydrothermal_venture;
+mod lanternfish;
 mod sonar_sweep;
 mod utils;
 
@@ -22,4 +23,5 @@ fn main() {
     binary_diagnostic::solve(&base.join("binary_diagnostic_input.txt"));
     giant_squid::solve(&base.join("giant_squid_input.txt"));
     hydrothermal_venture::solve(&base.join("hydrothermal_venture_input.txt"));
+    lanternfish::solve(&base.join("lanternfish_input.txt"));
 }
