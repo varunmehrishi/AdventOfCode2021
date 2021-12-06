@@ -1,7 +1,7 @@
 use super::floor::Floor;
 use super::vent::Vent;
 
-pub fn get_intersection_count(vents: &Vec<Vent>) -> i32 {
+pub fn get_intersection_count(vents: &[Vent]) -> i32 {
     let mut floor: Floor<1000> = Floor::new();
 
     vents

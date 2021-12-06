@@ -9,7 +9,7 @@ impl<const N: usize> Floor<N> {
         Floor { floor: [[0; N]; N] }
     }
 
-    pub fn mark_vertical(&mut self, vent: &Vent) -> () {
+    pub fn mark_vertical(&mut self, vent: &Vent) {
         if vent.delta_y() > 0 {
             for y in vent.start.1..=vent.stop.1 {
                 self.floor[vent.start.0 as usize][y as usize] += 1;
