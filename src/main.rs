@@ -6,6 +6,7 @@ mod dive;
 mod giant_squid;
 mod hydrothermal_venture;
 mod lanternfish;
+mod seven_segment;
 mod sonar_sweep;
 mod treachery_whales;
 mod utils;
@@ -26,4 +27,5 @@ fn main() {
     hydrothermal_venture::solve(&base.join("hydrothermal_venture_input.txt"));
     lanternfish::solve(&base.join("lanternfish_input.txt"));
     treachery_whales::solve(&base.join("treachery_whales_input.txt"));
+    seven_segment::solve(&base.join("seven_segment_input.txt"));
 }
