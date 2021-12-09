@@ -7,6 +7,7 @@ mod giant_squid;
 mod hydrothermal_venture;
 mod lanternfish;
 mod seven_segment;
+mod smoke_basin;
 mod sonar_sweep;
 mod treachery_whales;
 mod utils;
@@ -28,4 +29,5 @@ fn main() {
     lanternfish::solve(&base.join("lanternfish_input.txt"));
     treachery_whales::solve(&base.join("treachery_whales_input.txt"));
     seven_segment::solve(&base.join("seven_segment_input.txt"));
+    smoke_basin::solve::<100, 100>(&base.join("smoke_basin_input.txt"));
 }
