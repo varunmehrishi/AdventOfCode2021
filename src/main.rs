@@ -9,6 +9,7 @@ mod lanternfish;
 mod seven_segment;
 mod smoke_basin;
 mod sonar_sweep;
+mod syntax_scoring;
 mod treachery_whales;
 mod utils;
 
@@ -30,4 +31,5 @@ fn main() {
     treachery_whales::solve(&base.join("treachery_whales_input.txt"));
     seven_segment::solve(&base.join("seven_segment_input.txt"));
     smoke_basin::solve::<100, 100>(&base.join("smoke_basin_input.txt"));
+    syntax_scoring::solve(&base.join("syntax_scoring_input.txt"));
 }
