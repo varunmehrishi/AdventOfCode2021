@@ -3,6 +3,7 @@ use std::path::Path;
 
 mod binary_diagnostic;
 mod dive;
+mod dumbo_octopus;
 mod giant_squid;
 mod hydrothermal_venture;
 mod lanternfish;
@@ -32,4 +33,5 @@ fn main() {
     seven_segment::solve(&base.join("seven_segment_input.txt"));
     smoke_basin::solve::<100, 100>(&base.join("smoke_basin_input.txt"));
     syntax_scoring::solve(&base.join("syntax_scoring_input.txt"));
+    dumbo_octopus::solve::<10, 10>(&base.join("dumbo_octopus_input.txt"));
 }
