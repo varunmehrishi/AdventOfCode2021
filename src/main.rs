@@ -7,6 +7,7 @@ mod dumbo_octopus;
 mod giant_squid;
 mod hydrothermal_venture;
 mod lanternfish;
+mod passage_pathing;
 mod seven_segment;
 mod smoke_basin;
 mod sonar_sweep;
@@ -34,4 +35,5 @@ fn main() {
     smoke_basin::solve::<100, 100>(&base.join("smoke_basin_input.txt"));
     syntax_scoring::solve(&base.join("syntax_scoring_input.txt"));
     dumbo_octopus::solve::<10, 10>(&base.join("dumbo_octopus_input.txt"));
+    passage_pathing::solve(&base.join("passage_pathing_input.txt"));
 }
