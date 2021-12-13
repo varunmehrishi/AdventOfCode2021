@@ -12,6 +12,7 @@ mod seven_segment;
 mod smoke_basin;
 mod sonar_sweep;
 mod syntax_scoring;
+mod transparent_origami;
 mod treachery_whales;
 mod utils;
 
@@ -36,4 +37,5 @@ fn main() {
     syntax_scoring::solve(&base.join("syntax_scoring_input.txt"));
     dumbo_octopus::solve::<10, 10>(&base.join("dumbo_octopus_input.txt"));
     passage_pathing::solve(&base.join("passage_pathing_input.txt"));
+    transparent_origami::solve(&base.join("transparent_origami_input.txt"));
 }

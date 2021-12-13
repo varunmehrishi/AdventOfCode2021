@@ -1,4 +1,3 @@
-// use super::octopus::Octopus;
 use crate::utils::read_lines;
 use std::{collections::HashMap, io::Error, path::Path};
 
