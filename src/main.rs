@@ -4,6 +4,7 @@ use std::path::Path;
 mod binary_diagnostic;
 mod dive;
 mod dumbo_octopus;
+mod extended_polymerization;
 mod giant_squid;
 mod hydrothermal_venture;
 mod lanternfish;
@@ -38,4 +39,5 @@ fn main() {
     dumbo_octopus::solve::<10, 10>(&base.join("dumbo_octopus_input.txt"));
     passage_pathing::solve(&base.join("passage_pathing_input.txt"));
     transparent_origami::solve(&base.join("transparent_origami_input.txt"));
+    extended_polymerization::solve(&base.join("extended_polymerization_input.txt"));
 }
