@@ -1,7 +1,9 @@
+#![feature(map_first_last)]
 use std::env;
 use std::path::Path;
 
 mod binary_diagnostic;
+mod chiton;
 mod dive;
 mod dumbo_octopus;
 mod extended_polymerization;
@@ -22,6 +24,7 @@ fn main() {
 
     if args.len() != 2 {
         eprintln!("Usage ./aoc path_to_directory_containing_input_files");
+        return;
     }
 
     let base = Path::new(&args[1]);
@@ -40,4 +43,5 @@ fn main() {
     passage_pathing::solve(&base.join("passage_pathing_input.txt"));
     transparent_origami::solve(&base.join("transparent_origami_input.txt"));
     extended_polymerization::solve(&base.join("extended_polymerization_input.txt"));
+    chiton::solve::<100, 100>(&base.join("chiton_input.txt"));
 }
