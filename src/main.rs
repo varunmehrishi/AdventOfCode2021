@@ -10,6 +10,7 @@ mod extended_polymerization;
 mod giant_squid;
 mod hydrothermal_venture;
 mod lanternfish;
+mod packet_decoder;
 mod passage_pathing;
 mod seven_segment;
 mod smoke_basin;
@@ -44,4 +45,5 @@ fn main() {
     transparent_origami::solve(&base.join("transparent_origami_input.txt"));
     extended_polymerization::solve(&base.join("extended_polymerization_input.txt"));
     chiton::solve::<100, 100>(&base.join("chiton_input.txt"));
+    packet_decoder::solve(&base.join("packet_decoder_input.txt"));
 }
